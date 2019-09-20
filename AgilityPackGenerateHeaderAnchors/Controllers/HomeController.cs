@@ -30,6 +30,8 @@ namespace AgilityPackGenerateHeaderAnchors.Controllers
                     {
                         // if heading does not have an id, generate a safe id by creating a slug based on the heading text
                         // slug is a URL/SEO friendly part of a URL, this is a good option for generating anchor fragments
+                        // Source: http://predicatet.blogspot.com/2009/04/improved-c-slug-generator-or-how-to.html
+                        // assumption: Prase should only contain standard a-z characters or numbers
                         headingId = ToSlug(headingText);
                         // for the fragment to work (jump to the relevant content), the heading id and fragment needs to match
                         heading.Attributes.Append("id", headingId);
