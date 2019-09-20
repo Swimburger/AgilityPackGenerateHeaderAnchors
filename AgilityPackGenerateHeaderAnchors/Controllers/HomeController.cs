@@ -47,6 +47,8 @@ namespace AgilityPackGenerateHeaderAnchors.Controllers
             return doc.DocumentNode.InnerHtml;
         }
 
+        // Source: http://predicatet.blogspot.com/2009/04/improved-c-slug-generator-or-how-to.html
+        // assumption: Prase should only contain standard a-z characters or numbers
         public static string ToSlug(string phrase)
         {
             var str = phrase.ToLower();
